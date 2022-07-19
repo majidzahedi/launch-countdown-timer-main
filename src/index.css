@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .circle {
+    @apply absolute block h-4 w-4 rounded-full bg-blackishBlue;
+  }
+}
+
+.clock-container {
+  perspective-origin: 50% 50%;
+  perspective: 300px;
+}
+
+.transform-style {
+  transform-style: preserve-3d;
+}
+
+.animation-delay-5 {
+  animation-delay: 0.6s;
+}
