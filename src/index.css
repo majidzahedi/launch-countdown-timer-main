@@ -6,7 +6,15 @@
 
 @layer components {
   .circle {
-    @apply absolute block h-4 w-4 rounded-full bg-blackishBlue;
+    @apply absolute block h-1 w-1  rounded-full bg-blackishBlue md:h-2 md:w-2;
+  }
+}
+
+@layer utilities {
+  .backgrounds {
+    background-repeat: no-repeat, repeat;
+    background-position: center bottom, center top;
+    @apply bg-[url('/images/pattern-hills.svg'),_url('/images/bg-stars.svg')] bg-[position:right_bottom,_right_center] md:bg-[position:center_bottom,_right_center];
   }
 }
 
@@ -19,6 +27,7 @@
   transform-style: preserve-3d;
 }
 
-.animation-delay-5 {
-  animation-delay: 0.6s;
+.ficon:hover {
+  filter: invert(48%) sepia(89%) saturate(1180%) hue-rotate(310deg)
+    brightness(100%) contrast(98%);
 }

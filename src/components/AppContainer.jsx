@@ -1,10 +1,16 @@
 const AppContainer = ({ children }) => (
-  <div className="relative flex min-h-screen w-full flex-col items-center  justify-center space-y-16 bg-purple bg-[url('/images/pattern-hills.svg')] bg-bottom bg-no-repeat  font-sans text-7xl font-bold text-softRed">
-    <h1 className="text-4xl font-bold uppercase text-white">
+  <div className="backgrounds relative flex min-h-screen w-full flex-col items-center  justify-start space-y-24 bg-purple  pt-[8.5rem] ">
+    <h1 className="text-center text-xl uppercase tracking-[.35em] text-white md:text-2xl">
       We're launching soon
     </h1>
-    <img src="/images/bg-stars.svg" className="absolute top-0 " alt="" />
-    <div className="flex items-center space-x-8">{children}</div>
+    <div className="z-10 flex  items-center space-x-6 md:space-x-8">
+      {children}
+    </div>
+    <div className="absolute bottom-14 flex space-x-9 ">
+      <img src="/images/icon-facebook.svg" className="ficon w-7" />
+      <img src="/images/icon-pinterest.svg" className="ficon w-7" />
+      <img src="/images/icon-instagram.svg" className="ficon w-7" />
+    </div>
   </div>
 );
 
